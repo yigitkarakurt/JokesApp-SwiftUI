@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var jokesViewModel = JokesViewModel()
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            List(jokesViewModel.jokes) { element in
+                
+                
+                Text(element.setup)
+                
+            }
+            
+        }.onAppear{
+            jokesViewModel.getJokes()
+        
+        }.refreshable {
+            jokesViewModel.getJokes()
         }
+        
         .padding()
     }
 }

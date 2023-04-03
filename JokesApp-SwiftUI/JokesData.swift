@@ -8,9 +8,10 @@
 import Foundation
 
 // MARK: - Welcome
-struct Welcome: Codable {
+struct Welcome: Identifiable,Codable {
     let type, setup, punchline: String
     let id: Int
+    
 }
 
 //https://official-joke-api.appspot.com/random_joke

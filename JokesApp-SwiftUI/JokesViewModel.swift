@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Alamofire
+
 
 class JokesViewModel : ObservableObject {
     
@@ -13,6 +15,21 @@ class JokesViewModel : ObservableObject {
     
     func getJokes(){
         
+        AF.request("https://official-joke-api.appspot.com/random_joke", method: .get).responseDecodable(of:Welcome.self) { response in
+                
+            switch response.result {
+                
+            case .success(let data):
+                
+                self.jokes.removeAll()
+                self.jokes.append(data)
+                                
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
     }
     
 }
+//https://official-joke-api.appspot.com/random_joke
