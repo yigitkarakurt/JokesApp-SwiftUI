@@ -11,6 +11,8 @@
 		004F6ECF29DAE25100A55FB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F6ECE29DAE25100A55FB7 /* ContentView.swift */; };
 		004F6ED129DAE25200A55FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 004F6ED029DAE25200A55FB7 /* Assets.xcassets */; };
 		004F6ED429DAE25200A55FB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 004F6ED329DAE25200A55FB7 /* Preview Assets.xcassets */; };
+		004F6EDB29DAE90000A55FB7 /* JokesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F6EDA29DAE90000A55FB7 /* JokesData.swift */; };
+		004F6EDD29DAECDD00A55FB7 /* JokesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F6EDC29DAECDD00A55FB7 /* JokesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		004F6ECE29DAE25100A55FB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		004F6ED029DAE25200A55FB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		004F6ED329DAE25200A55FB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		004F6EDA29DAE90000A55FB7 /* JokesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesData.swift; sourceTree = "<group>"; };
+		004F6EDC29DAECDD00A55FB7 /* JokesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				004F6ECC29DAE25100A55FB7 /* JokesApp_SwiftUIApp.swift */,
+				004F6EDA29DAE90000A55FB7 /* JokesData.swift */,
+				004F6EDC29DAECDD00A55FB7 /* JokesViewModel.swift */,
 				004F6ECE29DAE25100A55FB7 /* ContentView.swift */,
 				004F6ED029DAE25200A55FB7 /* Assets.xcassets */,
 				004F6ED229DAE25200A55FB7 /* Preview Content */,
@@ -139,6 +145,8 @@
 			files = (
 				004F6ECF29DAE25100A55FB7 /* ContentView.swift in Sources */,
 				004F6ECD29DAE25100A55FB7 /* JokesApp_SwiftUIApp.swift in Sources */,
+				004F6EDB29DAE90000A55FB7 /* JokesData.swift in Sources */,
+				004F6EDD29DAECDD00A55FB7 /* JokesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
