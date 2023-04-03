@@ -9,24 +9,57 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var jokesViewModel = JokesViewModel()
+    @State var answer : String = ""
+
+    
+    
     var body: some View {
-        VStack {
-            
-            List(jokesViewModel.jokes) { element in
-                
-                
-                Text(element.setup)
-                
-            }
-            
-        }.onAppear{
-            jokesViewModel.getJokes()
         
-        }.refreshable {
-            jokesViewModel.getJokes()
+        
+            ScrollView {
+                
+                VStack{
+                    
+                    ForEach(jokesViewModel.jokes) { element in
+                        
+                        
+                        Text(element.setup).padding(.horizontal,15)
+                            .padding(.top,200)
+                        
+                        VStack{
+                            
+                            Button{
+                                answer = element.punchline
+                            }label: {
+                                
+                                Text("Get Answer!")
+                                    .padding()
+                                    .foregroundColor(.black)
+                                    .background(.red)
+                                    .cornerRadius(15)
+                                
+                            }.padding()
+                            
+                            Text(answer)
+                                .font(.callout)
+                            
+                        }
+                        
+                    }
+                }
+                
+                
+                
+                
+                
+            }.onAppear{
+                jokesViewModel.getJokes()
+                
+            }.refreshable {
+                jokesViewModel.getJokes()
+                answer = ""
+        
         }
-        
-        .padding()
     }
 }
 
